@@ -1,3 +1,3 @@
 # MAINTAINERS
 
-Christopher Ferris - chrisfer@us.ibm.com
+Rachana Vishwanathula - rachvis1@in.ibm.com
