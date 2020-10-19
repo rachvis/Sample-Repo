@@ -1,3 +1,3 @@
 # Sample-Repo
 
-This is an example repository
+This is an example repository for Opensource Projects
