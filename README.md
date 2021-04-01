@@ -1,6 +1,4 @@
-# Python Hello World Sample
-
-This application demonstrates a simple, reusable Python web application.
+# Word Search Game 
 
 ## Run the app locally
 
@@ -9,4 +7,3 @@ This application demonstrates a simple, reusable Python web application.
 1. Run `python server.py`
 1. Access the running app in a browser at <http://localhost:8000>
 
-[Install Python]: https://www.python.org/downloads/
