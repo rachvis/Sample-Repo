@@ -88,10 +88,10 @@
           puzzle[i].push('');
         }
       }
-
       // add each word into the puzzle one at a time
       for (i = 0, len = words.length; i < len; i++) {
         if (!placeWordInPuzzle(puzzle, options, words[i])) {
+
           // if a word didn't fit in the puzzle, give up
           return null;
         }
@@ -677,6 +677,34 @@
     * resets the game state to start a new word.
     *
     */
+
+
+  var totalSeconds = 0;
+
+
+  var timer = setInterval(setTime, 1000);
+  
+
+    // var setTime = function () {
+    //   ++totalSeconds;
+    //   $("#seconds").html(pad(totalSeconds % 60))
+    //   $("#minutes").html(pad(parseInt(totalSeconds / 60)))
+    // }
+
+  function setTime() {
+    ++totalSeconds;
+    $("#seconds").html(pad(totalSeconds % 60))
+    $("#minutes").html(pad(parseInt(totalSeconds / 60)))
+  }
+  
+  function pad(val) {
+    var valString = val + "";
+    if (valString.length < 2) {
+      return "0" + valString;
+    } else {
+      return valString;
+    }
+  }
     var endTurn = function () {
 
       // see if we formed a valid word
@@ -689,6 +717,8 @@
         }
 
         if (wordList.length === 0) {
+          console.log("I cm")
+          clearInterval(timer)
           $('.puzzleSquare').addClass('complete');
         }
       }
@@ -796,6 +826,8 @@
         
         $('#solve').addClass('gameSolved'); 
 
+     
+
       }
     };
   };
@@ -828,4 +860,6 @@ $(function () {
     {height: 5, width:15, fillBlanks: true}
   );
   wordfind.print(puzzle);
+
 });
+
